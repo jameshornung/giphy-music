@@ -1,4 +1,49 @@
 body{
 	height: 100%;
-	background-color: red;
+	background-color: rgb(254,253,240);
+	font-family: 'Raleway', 'Titillium Web', sans-serif;
+}
+
+.performer{
+	margin: 5px;
+	background-color: rgb(240,90,40);
+	border: 1px solid rgb(219,251,2);
+}
+
+.whatTheGif{
+
+}
+
+.diveBar{
+	float: left;
+}
+
+#inputForm{
+	padding-left: 10px;
+	padding-bottom: 5px;
+	background: rgb(212,211,196);
+}
+
+#bandInput{
+	margin-bottom: 10px;
+}
+
+label{
+	padding-top: 5px;
+}
+
+#addBand{
+	margin-bottom: 6px;
+	background-color: rgb(219,251,2);
+	border: 1px solid rgb(240,90,40);
+
+}
+
+#buttons{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#results{
+	margin: 10px;
 }

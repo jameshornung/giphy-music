@@ -1,7 +1,9 @@
-var musicians = ['Nirvana', 'Eminem', 'Sublime']
+var musicians = ['Nirvana', 'Eminem', 'Sublime', 'Pearl Jam', 'Soundgarden', 'Bush', 'No Doubt', 'Tupac', 'Snoop Dog', 'Dr. Dre', 'Too Short', 'UGK', 'Metallica', 'Rage Against The Machine', 'Tool', 'Ween', 'Smashing Pumpkins', 'The Offspring', 'DJ Screw', 'Nas']
 var apiKey = 'dc6zaTOxFJmzC';
 
 
+//FUNCTIONS
+//=============================================================================================
 
 function renderButtons(){ 
 $('#buttons').empty();
@@ -32,6 +34,7 @@ function displayGif(){
 			var animatedGiffy = response.data[i].images.original.url;
 			//this is a still image
 			var stillGiffy = response.data[i].images.original_still.url;
+			
 			var displayGiffy = $('<img>')
 			displayGiffy.attr('src', stillGiffy);
 			displayGiffy.attr('data-still', stillGiffy);
@@ -53,6 +56,7 @@ $('#addBand').on('click', function(){
 	return false;
 })
 
+//this function pauses and starts the gif
 function gifOff(){
 	var state = $(this).attr('data-state');
 
@@ -67,8 +71,11 @@ function gifOff(){
 
 }
 
+//GENERAL CODE
+//===============================================================================================
+
 renderButtons();
-// This function displays the gif
+
 $(document).on('click', '.performer', displayGif);
 
 $(document).on('click', '.whatTheGif', gifOff);
